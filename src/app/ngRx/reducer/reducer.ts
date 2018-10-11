@@ -1,10 +1,11 @@
 import { TodoModel } from '../../model/todoModel';
 import { ActionType, DefinitionsAction } from '../actions/definitions.action';
 import { StateEnum } from '../../enum/stateEnum';
+import { todoListMock } from '../../mock/todoMock';
 
 class ReducerFunction {
 
-  static appState(state: TodoModel[] = [], action: ActionType): TodoModel[] {
+  static appState(state: TodoModel[] = todoListMock, action: ActionType): TodoModel[] {
     let returnState = state;
     switch (action.type) {
       case DefinitionsAction.CREATE_TODO: {
