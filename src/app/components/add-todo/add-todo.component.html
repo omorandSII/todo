@@ -1,0 +1,14 @@
+<div class="form-container">
+  <form [formGroup]="form">
+    <mat-form-field>
+      <input formControlName="title" matInput placeholder="Title">
+    </mat-form-field>
+
+    <mat-form-field>
+      <textarea formControlName="content"  matAutosizeMinRows=1 matAutosizeMaxRows=5 matInput placeholder="Content"></textarea>
+    </mat-form-field>
+
+
+    <button mat-button="primary" (click)="add()">Add</button>
+  </form>
+</div>

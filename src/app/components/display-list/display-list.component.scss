@@ -1,0 +1,21 @@
+.container {
+
+  width: 200px;
+  margin: auto;
+
+  .titleTodo{
+    margin-left: 10px;
+  }
+
+  .titleTodo:hover{
+    cursor: pointer;
+  }
+
+  .doing {
+    text-decoration: line-through;
+  }
+
+  .todo {
+  }
+
+}

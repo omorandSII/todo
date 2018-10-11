@@ -1,0 +1,13 @@
+<div class="container">
+
+  <button mat-mini-fab  color="primary" (click)="addTodo()">
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <mat-list>
+    <mat-list-item *ngFor="let todo of todoList | reverse | filterState ">
+      <mat-checkbox [checked]="isDoing(todo)" (change)="updateState(todo)"></mat-checkbox>
+      <span [ngClass]="getTitleClass(todo)" (click)="consultTodo(todo)">{{todo.title}}</span>
+    </mat-list-item>
+  </mat-list>
+</div>
